@@ -58,13 +58,14 @@ In the directives. DOM Manipulations should not exist in controllers, services o
 
 #11. Is it a good or bad practice to use AngularJS together with jQuery?
 It is definitely a bad practice. We need to stay away from jQuery and try to realize the solution with an AngularJS approach. jQuery takes a traditional imperative approach to manipulating the DOM, and in an imperative approach, it is up to the programmer to express the individual steps leading up to the desired outcome.
-AngularJS, however, takes a declarative approach to DOM manipulation. Here, instead of worrying about all of the step by step details regarding how to do the desired outcome, we are just declaring what we want and AngularJS worries about the rest, taking care of everything for us. Here is a detailed explanation
+
+AngularJS, however, takes a declarative approach to DOM manipulation. Here, instead of worrying about all of the step by step details regarding how to do the desired outcome, we are just declaring what we want and AngularJS worries about the rest, taking care of everything for us. Here is [a detailed explanation](https://www.quora.com/Is-AngularJS-a-good-replacement-for-jQuery)
 
 #12. Explain the concept of scope hierarchy?  How many scope can an application have?
 Each angular application consist of one root scope but may have several child scopes. As child controllers and some directives create new child scopes, application can have multiple scopes. When new scopes are formed or created they are added as a children of their parent scope. Similar to DOM, they also creates a hierarchical structure.
 
 #13. Mention what are the advantages of using Angular.js framework ?
-Advantages of using Angular.js as framework are
+* Bullet list Advantages of using Angular.js as framework are
 Supports two way data-binding
 Supports MVC pattern
 Support static template and angular template
