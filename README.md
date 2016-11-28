@@ -176,8 +176,9 @@ This question is valuable as it gives insight into how the candidate debugs runt
 Sources: 
 [https://github.com/kentcdodds/ng-stats](https://github.com/kentcdodds/ng-stats)
 
-27. How would you make an Angular service return a promise? Write a code snippet as an example
+#27. How would you make an Angular service return a promise? Write a code snippet as an example
 To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
+
 `angular.factory('testService', function($q){
  return {
   getName: function(){
@@ -195,7 +196,8 @@ To add promise functionality to a service, we inject the “$q” dependency in 
 
 The $q library is a helper provider that implements promises and deferred objects to enable asynchronous functionality
 Source: https://docs.angularjs.org/api/ng/service/$q
-28. How do you reset a $timeout, $interval(), and disable a $watch()?
+
+#28. How do you reset a $timeout, $interval(), and disable a $watch()?
 To reset a timeout and/or $interval, assign the result of the function to a variable and then call the .cancel() function.
 var customTimeout = $timeout(function () {
   // arbitrary code
@@ -207,9 +209,11 @@ var deregisterWatchFn = $scope.$on(‘$destroy’, function () {
     // we invoke that deregistration function, to disable the watch
     deregisterWatchFn();
 });
-29. How would you validate a text input field for a twitter username, including the @ symbol?
+
+#29. How would you validate a text input field for a twitter username, including the @ symbol?
 You would use the ngPattern directive to perform a regex match that matches Twitter usernames. The same principal can be applied to validating phone numbers, serial numbers, barcodes, zip codes and any other text input.
-30. How would you implement application-wide exception handling in your Angular app?
+
+#30. How would you implement application-wide exception handling in your Angular app?
 Angular has a built-in error handler service called $exceptionHandler which can easily be overriden as seen below:
 myApp.factory('$exceptionHandler', function($log, ErrorService) {
     return function(exception, cause) {
@@ -223,7 +227,8 @@ myApp.factory('$exceptionHandler', function($log, ErrorService) {
     };
 });
 This is very useful for sending errors to third party error logging services or helpdesk applications. Errors trapped inside of event callbacks are not propagated to this handler, but can manually be relayed to this handler by calling $exceptionHandler(e) from within a try catch block.
-31. Explain what is Angular Expression? Explain what is key difference between angular expressions and JavaScript expressions?
+
+#31. Explain what is Angular Expression? Explain what is key difference between angular expressions and JavaScript expressions?
 Like JavaScript,  Angular expressions are code snippets that are usually placed in binding such as {{ expression }}
 The key difference between the JavaScript expressions and Angular expressions
 Context : In Angular, the expressions are evaluated against a scope object, while the Javascript expressions are evaluated against the global window
@@ -231,19 +236,23 @@ Forgiving: In Angular expression evaluation is forgiving to null and undefined, 
 No Control Flow Statements: Loops, conditionals or exceptions cannot be used in an angular expression
 Filters: To format data before displaying it you can use filters
 Source https://docs.angularjs.org/guide/expression
-32. What makes AngularJS better ?
+
+#32. What makes AngularJS better ?
 Registering Callbacks: There is no need to register callbacks . This makes your code simple and easy to debug.
 Control HTML DOM programmatically:  All the application that are created using Angular never have to manipulate the DOM although it can be done if it is required
 Transfer data to and from the UI: AngularJS helps to eliminate almost all of the boiler plate like validating the form, displaying validation errors, returning to an internal model and so on which occurs due to flow of marshalling data
 No initilization code: With AngularJS you can bootstrap your app easily using services, which auto-injected into your application in Guice like dependency injection style
-33. Explain what is string interpolation in Angular.js ?
+
+#33. Explain what is string interpolation in Angular.js ?
 In Angular.js the compiler during the compilation process matches text and attributes using interpolate service to see if they contains embedded expressions.  As part of normal digest cycle these expressions are updated and registered as watches.
-34. Mention the steps for the compilation process of HTML happens?
+
+#34. Mention the steps for the compilation process of HTML happens?
 Compilation of HTML process occurs in following ways
 Using the standard browser API, first the HTML is parsed into DOM
 By using the call to the $compile () method, compilation of the DOM is performed.  The method traverses the DOM and matches the directives.
 Link the template with scope by calling the linking function returned from the previous step
-35. Explain what is linking function and type of linking function?
+
+#35. Explain what is linking function and type of linking function?
 Link combines the directives with a scope and produce a live view.  For registering DOM listeners as well as updating the DOM, link function is responsible. After the template is cloned it is executed.
 Pre-linking function: Pre-linking function is executed before the child elements are linked.  It is not considered as the safe way for DOM transformation.
 Post linking function: Post linking function is executed after the child elements are linked. It is safe to do DOM transformation by post-linking function
