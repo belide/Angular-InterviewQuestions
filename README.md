@@ -179,7 +179,7 @@ Sources:
 #27. How would you make an Angular service return a promise? Write a code snippet as an example
 To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
 
-`angular.factory('testService', function($q){
+```angular.factory('testService', function($q){
  return {
   getName: function(){
    var deferred = $q.defer();
@@ -192,7 +192,7 @@ To add promise functionality to a service, we inject the “$q” dependency in 
    return deferred.promise;
   }
  }
-})`
+})```
 
 The $q library is a helper provider that implements promises and deferred objects to enable asynchronous functionality
 Source: https://docs.angularjs.org/api/ng/service/$q
